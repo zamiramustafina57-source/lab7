@@ -1,0 +1,14 @@
+def c():
+    count = 0
+    def f():
+        nonlocal count
+        count += 1
+        return count
+    return f
+f1= c()
+f2= c()
+
+print(f1())
+print(f2())
+print(f1())
+print(f2())
